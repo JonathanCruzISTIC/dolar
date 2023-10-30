@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+    <script src="vue.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main id="app" class="container bg-dark">
+        <div v-if="btnVisible"  class="d-flex justify-content-center p-1">
+            <button v-on:click="instalar" class="btn btn-danger">Instalar APP</button>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <div class="card m-4 p-2">
+                    <label for="">Dolar</label>
+                    <input v-model="dolar" type="number" class="from-control">
+
+                    <label for="">Pesos</label>
+                    <input v-model="pesos" type="number" class="from-control">
+
+                    <hr>
+                    <button v-on:click="calcular" type="button" class="btn btn-success"> Calcular</button>
+                </div>
+            </div>
+            <div class="col"></div>
+
+        </div>
+    </main>
+</body>
+</html>
